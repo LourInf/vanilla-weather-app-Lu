@@ -44,8 +44,8 @@ footer {
   font-size: 40px;
 }
 
-.maincloud {
-  font-size: 60px;
+.main-icon {
+  vertical-align: bottom;
 }
 .temperature-number {
   font-size: 60px;
