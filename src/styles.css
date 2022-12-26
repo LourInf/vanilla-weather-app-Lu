@@ -1,0 +1,100 @@
+body {
+  font-family: "Lora", serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vh;
+  height: 100vh;
+  margin: 40px auto;
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: 40px;
+}
+
+form {
+  margin-top: 10px;
+}
+ul {
+  margin: 10px 0 20px;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+footer {
+  text-align: center;
+  padding-top: 150px;
+}
+
+.illustration {
+  width: 80px;
+  display: block;
+  margin: auto;
+}
+
+.col-4 {
+  margin-top: 50px;
+}
+.search-engine {
+  margin-bottom: 10px;
+}
+.fa-cloud-sun {
+  font-size: 40px;
+}
+
+.maincloud {
+  font-size: 60px;
+}
+.temperature-number {
+  font-size: 60px;
+  font-weight: 600;
+}
+.temperature-unit {
+  font-size: 20px;
+  font-weight: 300;
+  position: relative;
+  top: -30px;
+}
+
+.f-degrees {
+  margin-right: 30px;
+}
+.btn-primary {
+  background-color: #be6a9e;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: #be6a9e;
+}
+
+.btn-secondary {
+  font-size: 14px;
+  padding: 5px;
+  margin-top: 6px;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #5c636a;
+}
+.footer-link {
+  color: #be6a9e;
+}
+.forecast {
+  margin: 60px auto;
+  border: 1px solid #ffe2d4;
+  padding: 40px;
+  max-width: 900px;
+  border-radius: 6px;
+}
+
+.temperature-max {
+  margin-right: 8px;
+}
+.temperature-min {
+  margin-left: 9px;
+}
