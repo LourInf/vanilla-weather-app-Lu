@@ -61,6 +61,8 @@ function showTemperature(response) {
     "alt",
     `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
   );
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -79,16 +81,6 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-function showFarenheit(event) {
-  event.preventDefault();
-  let link = document.querySelector("#display-temperature");
-  link.innerHTML = "66";
-}
-let showTempF = document.querySelector("#farenheit-link");
-showTempF.addEventListener("click", showFarenheit);
-
-searchCity("New York");
-
 function searchLocation(position) {
   let apiKey = "6f9e9856e7cd0b15541eb1cfd3f417ee";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -103,3 +95,29 @@ function getCurrentLocation(event) {
 
 let currentLocationButton = document.querySelector("#button-current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+function displayFarenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#display-temperature");
+  celsiusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
+  let FarenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(FarenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  farenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#display-temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+let celsiusTemperature = null;
+
+let farenheitLink = document.querySelector("#farenheit-link");
+farenheitLink.addEventListener("click", displayFarenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+searchCity("New York");
