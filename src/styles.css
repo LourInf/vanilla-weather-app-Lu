@@ -29,7 +29,7 @@ footer {
 }
 
 .illustration {
-  width: 80px;
+  width: 100px;
   display: block;
   margin: auto;
 }
@@ -97,11 +97,10 @@ footer {
   opacity: 0.8;
 }
 .temperature-max {
-  margin-right: 8px;
 }
 .temperature-min {
-  margin-left: 9px;
   opacity: 0.8;
+  margin-left: 8px;
 }
 .active {
   color: black;
